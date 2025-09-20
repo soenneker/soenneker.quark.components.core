@@ -45,5 +45,6 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.9" />
+        <PackageReference Include="Soenneker.Utils.AtomicBool" Version="3.0.9" />
     </ItemGroup>
 </Project>
