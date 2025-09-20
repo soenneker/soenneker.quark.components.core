@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Soenneker.Quark.Components.Core.Abstract;
 using Soenneker.Utils.AtomicBool;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Soenneker.Quark.Components.Core;
@@ -13,6 +14,9 @@ public abstract class CoreComponent : ComponentBase, ICoreComponent
 
     [Parameter]
     public virtual string? Id { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? Attributes { get; set; }
 
     protected virtual void OnDispose()
     {
