@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Soenneker.Quark.Components.Core.Abstract;
@@ -8,6 +9,11 @@ namespace Soenneker.Quark.Components.Core.Abstract;
 /// </summary>
 public interface ICoreComponent : IDisposable, IAsyncDisposable
 {
+    /// <summary>
+    /// Gets or sets the HTML attributes to apply to the element.
+    /// </summary>
+    Dictionary<string, object>? Attributes { get; set; }
+
     string? Id { get; set; }
 
     /// <summary>
