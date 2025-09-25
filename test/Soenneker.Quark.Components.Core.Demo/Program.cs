@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Web;
@@ -10,7 +10,7 @@ using Serilog;
 using Serilog.Debugging;
 using Soenneker.Serilog.Sinks.Browser.Blazor.Registrars;
 
-namespace Soenneker.Quark.Components.Core.Demo;
+namespace Soenneker.Quark.Components.Core;
 
 public sealed class Program
 {

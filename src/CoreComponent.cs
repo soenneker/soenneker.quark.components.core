@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Components;
-using Soenneker.Quark.Components.Core.Abstract;
+using Microsoft.AspNetCore.Components;
 using Soenneker.Utils.AtomicBool;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Soenneker.Quark.Components.Core;
+namespace Soenneker.Quark;
 
 /// <inheritdoc cref="ICoreComponent"/>
 public abstract class CoreComponent : ComponentBase, ICoreComponent

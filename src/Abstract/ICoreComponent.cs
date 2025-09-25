@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Soenneker.Quark.Components.Core.Abstract;
+namespace Soenneker.Quark;
 
 /// <summary>
 /// A Blazor core class for the Quark component.

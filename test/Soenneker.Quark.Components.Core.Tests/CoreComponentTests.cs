@@ -1,7 +1,7 @@
-﻿using Soenneker.Tests.FixturedUnit;
+using Soenneker.Tests.FixturedUnit;
 using Xunit;
 
-namespace Soenneker.Quark.Components.Core.Tests;
+namespace Soenneker.Quark.Components.Core;
 
 [Collection("Collection")]
 public sealed class CoreComponentTests : FixturedUnitTest

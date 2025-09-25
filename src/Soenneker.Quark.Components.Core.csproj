@@ -6,7 +6,7 @@
         <TargetFrameworks>net9.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <Platforms>AnyCPU</Platforms>
-        <NoWarn>$(NoWarn);1591</NoWarn>
+        <NoWarn>$(NoWarn);1591;IDE0130</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -35,6 +35,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+        <RootNamespace>Soenneker.Quark</RootNamespace>
+        <GenerateDefaultNamespace>false</GenerateDefaultNamespace>
     </PropertyGroup>
 
     <ItemGroup>
