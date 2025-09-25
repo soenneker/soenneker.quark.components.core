@@ -10,7 +10,7 @@ using Serilog;
 using Serilog.Debugging;
 using Soenneker.Serilog.Sinks.Browser.Blazor.Registrars;
 
-namespace Soenneker.Quark.Components.Core;
+namespace Soenneker.Quark.Components.Core.Demo;
 
 public sealed class Program
 {
