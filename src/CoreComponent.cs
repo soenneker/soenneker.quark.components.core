@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
-using Soenneker.Utils.AtomicBool;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Soenneker.Atomics.Bools;
 
 namespace Soenneker.Quark;
 
