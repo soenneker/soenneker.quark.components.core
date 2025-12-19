@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Soenneker.Atomics.Bools;
+using Soenneker.Atomics.ValueBools;
 
 namespace Soenneker.Quark;
 
 /// <inheritdoc cref="ICoreComponent"/>
 public abstract class CoreComponent : ComponentBase, ICoreComponent
 {
-    protected AtomicBool Disposed;
-    protected AtomicBool AsyncDisposed;
+    protected ValueAtomicBool Disposed;
+    protected ValueAtomicBool AsyncDisposed;
 
     [Parameter]
     public virtual string? Id { get; set; }
