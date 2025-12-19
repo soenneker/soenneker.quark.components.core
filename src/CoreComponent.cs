@@ -8,8 +8,8 @@ namespace Soenneker.Quark;
 /// <inheritdoc cref="ICoreComponent"/>
 public abstract class CoreComponent : ComponentBase, ICoreComponent
 {
-    protected readonly AtomicBool Disposed = new();
-    protected readonly AtomicBool AsyncDisposed = new();
+    protected AtomicBool Disposed;
+    protected AtomicBool AsyncDisposed;
 
     [Parameter]
     public virtual string? Id { get; set; }
