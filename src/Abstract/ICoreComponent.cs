@@ -12,7 +12,7 @@ public interface ICoreComponent : IDisposable, IAsyncDisposable
     /// <summary>
     /// Gets or sets the HTML attributes to apply to the element.
     /// </summary>
-    Dictionary<string, object>? Attributes { get; set; }
+    IReadOnlyDictionary<string, object>? Attributes { get; set; }
 
     string? Id { get; set; }
 

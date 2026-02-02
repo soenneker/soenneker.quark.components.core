@@ -15,7 +15,7 @@ public abstract class CoreComponent : ComponentBase, ICoreComponent
     public virtual string? Id { get; set; }
 
     [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object>? Attributes { get; set; }
+    public IReadOnlyDictionary<string, object>? Attributes { get; set; }
 
     protected virtual void OnDispose()
     {
