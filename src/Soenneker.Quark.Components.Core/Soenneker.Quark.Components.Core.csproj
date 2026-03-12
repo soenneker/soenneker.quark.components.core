@@ -52,6 +52,6 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.4" />
-        <PackageReference Include="Soenneker.Atomics.ValueBools" Version="4.0.18" />
+        <PackageReference Include="Soenneker.Atomics.ValueBools" Version="4.0.19" />
     </ItemGroup>
 </Project>
