@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Soenneker.Atomics.ValueBools;
+using Soenneker.Extensions.ValueTask;
 
 namespace Soenneker.Quark;
 
@@ -9,7 +10,6 @@ namespace Soenneker.Quark;
 public abstract class CoreComponent : ComponentBase, ICoreComponent
 {
     protected ValueAtomicBool Disposed;
-    protected ValueAtomicBool AsyncDisposed;
 
     [Parameter]
     public virtual string? Id { get; set; }
@@ -21,30 +21,24 @@ public abstract class CoreComponent : ComponentBase, ICoreComponent
     {
     }
 
-    protected virtual Task OnDisposeAsync() => Task.CompletedTask;
+    protected virtual ValueTask OnDisposeAsync() => ValueTask.CompletedTask;
 
     public virtual void Dispose()
     {
-        // Run sync cleanup once
-        if (Disposed.TrySetTrue())
-        {
-            OnDispose();
-        }
+        if (!Disposed.TrySetTrue())
+            return;
+
+        OnDispose();
     }
 
     public virtual async ValueTask DisposeAsync()
     {
-        // Run async cleanup once
-        if (AsyncDisposed.TrySetTrue())
-        {
-            await OnDisposeAsync();
-        }
+        if (!Disposed.TrySetTrue())
+            return;
 
-        // Ensure the sync hook also runs once (if it hasn't already)
-        if (Disposed.TrySetTrue())
-        {
-            // ReSharper disable once MethodHasAsyncOverload
-            OnDispose();
-        }
+        await OnDisposeAsync()
+            .NoSync();
+
+        OnDispose();
     }
 }
